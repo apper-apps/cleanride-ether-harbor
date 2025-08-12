@@ -1,0 +1,82 @@
+@import 'react-toastify/dist/ReactToastify.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Toast Overrides */
+.Toastify__toast-container {
+  @apply text-sm font-medium;
+  z-index: 9999 !important;
+}
+
+.Toastify__toast {
+  @apply rounded-lg shadow-lg;
+  min-height: 48px;
+}
+
+.Toastify__toast--success {
+  @apply bg-white border-l-4 border-success text-gray-800;
+}
+
+.Toastify__toast--error {
+  @apply bg-white border-l-4 border-error text-gray-800;
+}
+
+.Toastify__toast--info {
+  @apply bg-white border-l-4 border-info text-gray-800;
+}
+
+.Toastify__progress-bar {
+  @apply bg-primary-500;
+}
+
+/* Custom Base Styles */
+@layer base {
+  body {
+    font-family: Inter, system-ui, sans-serif;
+    line-height: 1.6;
+    color: theme('colors.gray.900');
+    background-color: theme('colors.gray.50');
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+}
+
+/* Button Animation */
+@layer components {
+  .btn-press {
+    @apply transform transition-transform duration-150 active:scale-95;
+  }
+  
+  .camera-flash {
+    animation: flash 0.2s ease-out;
+  }
+  
+  @keyframes flash {
+    0% { background-color: transparent; }
+    50% { background-color: rgba(255, 255, 255, 0.8); }
+    100% { background-color: transparent; }
+  }
+  
+  .slide-enter {
+    transform: translateX(100%);
+  }
+  
+  .slide-enter-active {
+    transform: translateX(0%);
+    transition: transform 200ms ease-out;
+  }
+  
+  .slide-exit {
+    transform: translateX(0%);
+  }
+  
+  .slide-exit-active {
+    transform: translateX(-100%);
+    transition: transform 200ms ease-out;
+  }
+}

@@ -1,0 +1,29 @@
+[
+  {
+    "Id": 1,
+    "trainId": "A123",
+    "carId": "C01",
+    "photoUrl": "https://example.com/photo1.jpg",
+    "category": "Standard",
+    "timestamp": "2024-01-15T10:30:00Z",
+    "status": "submitted"
+  },
+  {
+    "Id": 2,
+    "trainId": "B456",
+    "carId": "C02",
+    "photoUrl": "https://example.com/photo2.jpg",
+    "category": "Priority",
+    "timestamp": "2024-01-15T11:45:00Z",
+    "status": "submitted"
+  },
+  {
+    "Id": 3,
+    "trainId": "A789",
+    "carId": "C01",
+    "photoUrl": "https://example.com/photo3.jpg",
+    "category": "Standard",
+    "timestamp": "2024-01-15T14:20:00Z",
+    "status": "pending"
+  }
+]
