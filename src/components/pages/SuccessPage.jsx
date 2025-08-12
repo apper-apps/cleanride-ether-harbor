@@ -15,11 +15,11 @@ const SuccessPage = ({ reportData, onNewReport }) => {
     <div className="min-h-screen bg-gradient-to-br from-success/5 to-green-50 px-4 py-8">
       <div className="max-w-md mx-auto space-y-8">
         <div className="text-center space-y-6">
-          <div className="relative">
-            <div className="w-24 h-24 bg-gradient-to-br from-success to-green-600 rounded-full mx-auto flex items-center justify-center shadow-2xl">
+<div className="relative">
+            <div className="w-28 h-28 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl mx-auto flex items-center justify-center shadow-xl">
               {showCheckmark && (
                 <svg
-                  className="w-12 h-12 text-white"
+                  className="w-14 h-14 text-white"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -38,13 +38,13 @@ const SuccessPage = ({ reportData, onNewReport }) => {
                 </svg>
               )}
             </div>
-            <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-gradient-to-br from-accent-500 to-secondary-500 rounded-full flex items-center justify-center shadow-lg">
-              <ApperIcon name="Zap" size={16} className="text-gray-900" />
+            <div className="absolute -bottom-2 -right-2 w-10 h-10 bg-gradient-to-br from-teal-400 to-teal-500 rounded-xl flex items-center justify-center shadow-lg">
+              <ApperIcon name="Zap" size={18} className="text-white" />
             </div>
           </div>
 
-          <div className="space-y-3">
-            <h1 className="text-2xl font-bold text-gray-900 font-display">Report Submitted!</h1>
+          <div className="space-y-4">
+            <h1 className="text-3xl font-bold text-gray-900 font-display">Report Submitted!</h1>
             <p className="text-gray-600 leading-relaxed">
               Thank you for helping keep our trains clean. Your report has been received and will be addressed promptly.
             </p>
@@ -80,8 +80,8 @@ const SuccessPage = ({ reportData, onNewReport }) => {
               
               <div className="flex justify-between items-center">
                 <span className="text-sm text-gray-600">Submitted</span>
-                <span className="text-sm font-medium text-gray-900">
-                  {new Date(reportData.timestamp).toLocaleString()}
+<span className="text-sm font-medium text-gray-900">
+                  {reportData.timestamp ? new Date(reportData.timestamp).toLocaleString() : new Date().toLocaleString()}
                 </span>
               </div>
             </div>

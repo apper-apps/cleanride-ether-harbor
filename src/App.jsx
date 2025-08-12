@@ -16,12 +16,13 @@ import { getUrlParams, generateReportId } from "@/utils/urlParams";
 
 const App = () => {
   const [currentStep, setCurrentStep] = useState("welcome");
-  const [reportData, setReportData] = useState({
+const [reportData, setReportData] = useState({
     trainId: "",
     carId: "",
     photoUrl: "",
     category: "",
-    id: ""
+    id: "",
+    timestamp: null
   });
   const [capturedPhoto, setCapturedPhoto] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("");
@@ -91,12 +92,13 @@ const App = () => {
     
     // Get fresh URL params
     const urlParams = getUrlParams();
-    setReportData({
+setReportData({
       trainId: urlParams.trainId,
       carId: urlParams.carId,
       photoUrl: "",
       category: "",
-      id: generateReportId()
+      id: generateReportId(),
+      timestamp: new Date().toISOString()
     });
   };
 
